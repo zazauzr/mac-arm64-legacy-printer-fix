@@ -6,6 +6,14 @@ Organizations often face hardware-software lifecycle misalignment when migrating
 The official vendor `.pkg` distribution packages contain hardcoded installation blocks preventing execution on newer macOS versions (e.g., macOS 15+ Sequoia), despite the driver binaries being functionally compatible via the Rosetta 2 emulation layer. 
 
 **Business Goal:** Avoid hardware decommissioning costs, maintain ecological sustainability targets, and provide zero-touch deployment for legacy peripherals on next-gen hardware.
+##  Technical Diagnosis & Workflow Analysis
+
+| Stage | Verification Visual | Description |
+| :--- | :---: | :--- |
+| **01. Initial Failure** | <img src="docs/img/01_installer_version_error.png" width="380"/> | Vendor package installation gate blocking deployment due to OS target checking constraints. |
+| **02. Code Inspection** | <img src="docs/img/02_distribution_manifest_analysis.png" width="380"/> | Isolated JavaScript runtime block in `Distribution` using strict `system.compareVersions` validation. |
+| **03. CLI Expansion** | <img src="docs/img/03_terminal_expansion.png" width="380"/> | Decompilation of the PKG structure using the native macOS `pkgutil` system utility. |
+| **04. Artifact Build** | <img src="docs/img/04_repackaged_artifact.png" width="380"/> | Validated output artifact (`HP-Fixed.pkg`) rebuilt and ready for system installation. |
 
 ##  Architecture & Technology Stack
 * **Target Hardware Platform:** Apple Silicon ARM64 System architecture
