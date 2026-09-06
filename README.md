@@ -64,7 +64,7 @@ system default destination: Enterprise_LaserJet_P1102
 ### 2. Generate Hardware-Level Engine Test Page
 If paper jam errors occur or sensors register a false "Out of Paper" state, flush the OS queue spool and trigger a direct page feed sequence by opening and closing the device cartridge lid panel **5 consecutive times within a 5-second interval**. This forces an internal hardware self-test bypass matrix. # Legacy Hardware Provisioning & Driver Patching on modern ARM64 macOS Oses
 
-## 📋 Business Problem & Overview
+## Business Problem & Overview
 Organizations often face hardware-software lifecycle misalignment when migrating employee workstations to modern hardware platforms. In this case, upgrading corporate laptops to **ARM64 Architecture (Apple Silicon / M-Series / A18 Pro)** broken native compatibility with widespread **legacy monochrome laser printers (HP LaserJet P1102s Series / SKU: CE652A)**.
 
 The official vendor `.pkg` distribution packages contain hardcoded installation blocks preventing execution on newer macOS versions (e.g., macOS 15+ Sequoia), despite the driver binaries being functionally compatible via the Rosetta 2 emulation layer. 
