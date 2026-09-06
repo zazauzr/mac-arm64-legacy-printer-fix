@@ -71,7 +71,7 @@ The official vendor `.pkg` distribution packages contain hardcoded installation 
 
 **Business Goal:** Avoid hardware decommissioning costs, maintain ecological sustainability targets, and provide zero-touch deployment for legacy peripherals on next-gen hardware.
 
-## 🛠️ Architecture & Technology Stack
+##  Architecture & Technology Stack
 * **Target Hardware Platform:** Apple Silicon ARM64 System architecture
 * **Legacy Peripheral Target:** HP LaserJet Pro P1102s (Generic PCL Subsystem)
 * **Infrastructure Tools:** macOS `pkgutil` utility, Bash Automation, CUPS (Common UNIX Printing System) Core API.
@@ -79,7 +79,7 @@ The official vendor `.pkg` distribution packages contain hardcoded installation 
 
 ---
 
-## 🚀 Step-by-Step Deployment Guide
+##  Step-by-Step Deployment Guide
 
 ### Prerequisites
 1. Download the baseline legacy driver package from the vendor repository and rename it to `HewlettPackardPrinterDrivers.pkg`.
@@ -111,7 +111,7 @@ If automated deployment is blocked by corporate MDM policies, perform execution 
 
 ---
 
-## 🔍 Verification & Healthchecks
+##  Verification & Healthchecks
 
 To verify that the driver engine bypass and physical hardware scheduling queues are operational, execute the following diagnostic assertions.
 
